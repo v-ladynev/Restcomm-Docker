@@ -36,7 +36,7 @@ echo -e "INFO" > /etc/container_environment/RCBCONF_LOG_LEVEL_COMPONENT_RESTCOMM
 echo -e "''" > /etc/container_environment/RCBCONF_SMS_PREFIX
 
 #TTS - this is a free acount KEY - please create your personal key (http://www.voicerss.org/)
-echo -e "f4840af6675b4d20a8d96dea8466296b" > /etc/container_environment/RCBCONF_VOICERSS_KEY
+echo -e "5a11d9d17df1431fa8b7a577cfb38d43" > /etc/container_environment/RCBCONF_VOICERSS_KEY
 
 #RVD_LOCATION
 echo -e "/var/restcomm/rvd/workspace" > /etc/container_environment/RCADVCONF_RVD_LOCATION
