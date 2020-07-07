@@ -4,7 +4,11 @@
 
 To build the image:
 
-First git clone this repository and then:
+1. git clone this repository
+
+2. if you are using Windows check that all shell scripts have `LF` line separators
+
+3. run this command to build `restcomm/restcomm` image
 
 ```docker build -t restcomm/restcomm:latest -f Dockerfile .```
 
