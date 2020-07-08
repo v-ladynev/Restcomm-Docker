@@ -31,3 +31,27 @@ docker-compose up
 username : administrator@company.com
 password : RestComm  
 ```
+
+## REST API
+
+ After you sign up with Restcomm, you can find your Account SID and Auth Token by navigating to your profile → Account in the Restcomm Console.
+ 
+ You then need to use these credentials in your request’s Authorization header using Basic authentication type (i.e. Authorization: Basic <base64-encoded AccountSID:AuthToken>)
+ 
+ REST API can be tested using get accounts request
+
+```bash
+curl -X GET https://www.restcomm.com/restcomm/2012-04-24/Accounts/ACCOUNT_SID.json  \
+   -u 'YourAccountSid:YourAuthToken'
+``` 
+ 
+ example for
+ ```
+Account SID: ACae6e420f425248d6a26948c17a9e2acf
+Auth Token: 94fe4b386b6f8127d0b1ccad6f7dc805 
+``` 
+  
+ ```bash
+ curl --location --request GET 'localhost:8080/restcomm/2012-04-24/Accounts/ACae6e420f425248d6a26948c17a9e2acf.json' \
+ --header 'Authorization: Basic QUNhZTZlNDIwZjQyNTI0OGQ2YTI2OTQ4YzE3YTllMmFjZjo5NGZlNGIzODZiNmY4MTI3ZDBiMWNjYWQ2ZjdkYzgwNQ==' 
+```
