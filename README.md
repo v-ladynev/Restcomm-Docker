@@ -8,16 +8,26 @@ To build the image:
 
 2. if you are using Windows check that all shell scripts have `LF` line separators
 
-3. run this command to build `restcomm/restcomm` image
+3. run this command from the root of this project to build `restcomm/restcomm` image. Make sure you don't skip the dot (.) at the end of the command
+```bash
+docker build -t restcomm/restcomm:latest -f Dockerfile .
+```
+Parameters explanation
 
-```docker build -t restcomm/restcomm:latest -f Dockerfile .```
+`-t` Name and optionally a tag in the 'name:tag' format (`restcomm/restcomm:latest`)
 
-__Make sure you don't skip the dot (.) at the end of the command__
+`-f` Docker file to use for build the container (`Dockerfile`)
 
-__-t Name and optionally a tag in the 'name:tag' format__
+## Run
 
-__-f Docker file to use for build the container__
+1. run Restcomm application using `docker-compose` from the root  
+```bash
+docker-compose up
+```
+2. login using URL http://localhost:8080/
 
-Docker official links:
-[Docker build manual](https://docs.docker.com/engine/reference/commandline/build/)
-
+3. enter default credentials
+```
+username : administrator@company.com
+password : RestComm  
+```
